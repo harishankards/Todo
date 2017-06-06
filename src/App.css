@@ -35,6 +35,7 @@
   background: linear-gradient(to bottom, #02BFAC 10%, transparent 90%, #02BFAC);
   height: 300px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .tasks::-webkit-scrollbar{
@@ -55,7 +56,6 @@
 
 
 .tasks .task{
-  min-height: 40px;
   border: none;
   background: #FFF;
   border-radius: 5px;
@@ -66,10 +66,9 @@
   box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.15);
   margin: 10px 2px 10px 2px;
   width: 230px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  display: inline-block;
   transition: all .1s;
+  min-height: 1px;
 }
 
 .tasks .task:hover{
