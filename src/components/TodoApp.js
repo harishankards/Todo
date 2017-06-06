@@ -56,7 +56,7 @@ class TodoApp extends Component{
     return(
       <div className="todolist-app">
         <div className="todolist-header">
-          <h1>Pacifico</h1>
+          <h1>Todo app</h1>
         </div>
         <Tasks items={this.state.items} removeTask={this.removeTask.bind(this)}/>
         <div className="todolist-footer">
