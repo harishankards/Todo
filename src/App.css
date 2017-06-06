@@ -132,4 +132,7 @@ button:hover,button:focus, button:active{
   color: #FFF;
   opacity: 0.62;
   margin: auto;
+  font-size: 30px;
+  line-height: 2em;
+  width: 40%;
 }

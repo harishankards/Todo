@@ -32,8 +32,7 @@ class TodoApp extends Component{
   removeTask(e){
     this.setState({items: this.state.items.filter(v=>{
       return this.state.items.indexOf(v) !== Number(e.target.dataset.key);
-    })});
-    this.saveData();
+    })}, ()=>{this.saveData()});
   }
 
   Submit(e){
@@ -46,12 +45,11 @@ class TodoApp extends Component{
       this.setState((prevState)=>({
         items: prevState.items.concat(newTask),
         text: ''
-      }));
+      }), ()=> {this.saveData()});
       document.getElementById("todo").value = "";
     } else if(document.getElementById("todo").value === ''){
       alert("Please enter the a task!");
     }
-    this.saveData();
   }
 
   render(){
